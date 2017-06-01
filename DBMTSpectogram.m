@@ -1,4 +1,4 @@
-function [ final_est ] = DBMTSpectogram( y,W,K,U,time_halfbandwidth,num_tapers,Fs )
+function [ final_est ] = DBMTSpectrogram( y,W,K,U,time_halfbandwidth,num_tapers,Fs )
 %Computed spectogram using the proposed method
 %   y = Times series data
 %   W = window length in seconds
@@ -62,4 +62,3 @@ ylabel('Frequency(Hz)','Interpreter','Latex');
 title('DBMTSpectogram','Interpreter','Latex');
 drawnow
 end
-
