@@ -71,7 +71,7 @@ colormap('jet');
 colorbar;
 xlabel('Time(s)','Interpreter','Latex');
 ylabel('Frequency(Hz)','Interpreter','Latex');
-title('DBMTSpectogram','Interpreter','Latex');
+title('Ground Truth','Interpreter','Latex');
 drawnow
 %% Estimates
 W = 6;          % 6 s window-length
@@ -85,15 +85,15 @@ figure,
 %************************Multitaper Spectrogram****************************
 overlap = 0.5;  % 50% Overlap
 subplot(4,1,2),
-mtm_est = MTSpectogram(y,W,overlap,rho,K,Fs);
+mtm_est = MTSpectrogram(y,W,overlap,rho,K,Fs);
 
 %***************************DBMT Spectrogram*******************************
 subplot(4,1,3),
-DBMT_est = DBMTSpectogram(y,W,R,U,rho,K,Fs);
+DBMT_est = DBMTSpectrogram(y,W,R,U,rho,K,Fs);
 
 %*************************log_DBMT Spectrogram*****************************
 subplot(4,1,4),
-log_DBMT_est = log_DBMTSpectogram(y,W,U,rho,K,Fs);
+log_DBMT_est = log_DBMTSpectrogram(y,W,U,rho,K,Fs);
 
 %% Confidence Intervals for window starting at t = 79*6 = 477 sec 
 figure, 
