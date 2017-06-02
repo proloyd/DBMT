@@ -73,6 +73,7 @@ PSD_true = 10*log10((abs(PSDa+PSDb).^2)/(Fs));
 figure, 
 subplot(4,1,1), pcolor(((0:99)'+0.5)*6,Freq(1:300),PSD_y(1:300,1:100));
 ylim([0 20]);
+caxis([-50 15]);
 shading flat;
 colormap('jet');
 colorbar;
@@ -92,14 +93,17 @@ K = 3;          % # of tapers
 overlap = 0.5;  % 50% Overlap
 subplot(4,1,2),
 mtm_est = MTSpectrogram(y,W,overlap,rho,K,Fs);
+caxis([-50 15]);
 
 %***************************DBMT Spectrogram*******************************
 subplot(4,1,3),
 DBMT_est = DBMTSpectrogram(y,W,R,U,rho,K,Fs);
+caxis([-50 15]);
 
 %*************************log_DBMT Spectrogram*****************************
 subplot(4,1,4),
 log_DBMT_est = log_DBMTSpectrogram(y,W,U,rho,K,Fs);
+caxis([-50 15]);
 
 %*****Confidence Intervals for window starting at t = 79*6 = 477 sec******* 
 figure, 
