@@ -1,6 +1,12 @@
 function [ final_est ] = DBMTSpectrogram( y,W,K,U,time_halfbandwidth,num_tapers,Fs )
-%Computed spectogram using the proposed method
-%   y = Times series data
+%[ final_est ] = DBMTSpectrogram( y,W,K,U,time_halfbandwidth,num_tapers,Fs ) computes DBMT
+% spectrogram of time-series data. 
+%
+% Outputs:
+%   c_mt_est = conventional multitaper estimate
+%
+%Inputs:
+%   y = Data
 %   W = window length in seconds
 %   K = # of frequency bin
 %   U = # of frequency points to be estimated
@@ -8,14 +14,13 @@ function [ final_est ] = DBMTSpectrogram( y,W,K,U,time_halfbandwidth,num_tapers,
 %   num_seq = # of tapers to be used
 %   Fs = Sampling Frequency
 
-
 W = W*Fs;
 N = floor(length(y)/W); %# of windows
 TOL = 3*10^-3;
 final_est = 0;
-max_iter = 40;
+max_iter = 40;          % usually takes <10 iterations
 
-sigma2 = 0.0001;
+sigma2 = 0.0001;        % sigma2 and Q^{[0]} needs to be chosed for faster convergence
 alpha = 0;
 
 %**********************generate dpss_sequences*****************************
@@ -35,8 +40,8 @@ F = zeros(W,2*U,N);
  
 for seq_num = 1:1:num_tapers
     processed_data = Window_then_Taper(y,dps_seq(:,seq_num));
-    % x = 0*ones(2*U+1,N);     %k|k or k|N
-    x = 0*ones(2*U,N);     %k|k or k|N
+    % x = 0*ones(2*U+1,N);      %k|k or k|N
+    x = 0*ones(2*U,N);          %k|k or k|N
     tic
     [x_sol,alpha] = DBMT_EM(seq_num,x,F,N,W,U,processed_data,sigma2,alpha,TOL,max_iter);
     alpha = 0;
