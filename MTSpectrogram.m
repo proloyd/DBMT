@@ -1,6 +1,12 @@
 function [ c_mt_est ] = MTSpectrogram( y,W,overlap,time_halfbandwidth,num_seq,Fs )
-%MTSpectogram( y,N,overlap,time_halfbandwidth,num_seq,Fs ) computes multitaper
-% Spectrogram of y, with the following specifications:
+%MTSpectogram( y,N,overlap,time_halfbandwidth,num_seq,Fs ) computes overlapped multitaper
+% Spectrogram 
+
+%   Outputs:
+%   c_mt_est = conventional multitaper estimate
+%
+%   Inputs:
+%   y = Data
 %   W = window length in seconds
 %   overlap \in [0,1]
 %   time_halfbandwidth = N*B
