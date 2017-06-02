@@ -88,7 +88,6 @@ N = floor(length(y)/(Fs*W));
 rho = 3;
 K = 3;          % # of tapers
 
-figure, 
 %************************Multitaper Spectrogram****************************
 overlap = 0.5;  % 50% Overlap
 subplot(4,1,2),
