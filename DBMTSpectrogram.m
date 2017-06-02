@@ -11,7 +11,7 @@ function [ final_est ] = DBMTSpectrogram( y,W,K,U,time_halfbandwidth,num_tapers,
 %   K = # of frequency bin
 %   U = # of frequency points to be estimated
 %   time_halfbandwidth = N*B
-%   num_seq = # of tapers to be used
+%   num_tapers = # of tapers to be used
 %   Fs = Sampling Frequency
 
 W = W*Fs;
