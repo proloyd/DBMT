@@ -6,7 +6,7 @@ clear all
 mkdir CMT
 mkdir DBMT
 mkdir log_DBMT
-%%*************************Generation of Toy Example***********************
+%*************************Generation of Toy Example***********************
 T = 600; % in s
 Fs = 110;
 f0 = 0.02; % in Hz
@@ -15,7 +15,7 @@ f2 = 5; % in Hz;
 t = 0:(T/(Fs*600-1)):T;
 sigma_b = 6*10^-4;
 sigma_a = 1*10^-5;
-%%
+
 %************************Amplitude Modulated Component*********************
 b = conv(conv(conv([1 -0.98*exp(1j*2*(pi)*f1/110)],[1 -0.98*exp(-1j*2*(pi)*f1/110)]),conv([1 -0.98*exp(1j*2*(pi)*f1/110)],[1 -0.98*exp(-1j*2*(pi)*f1/110)])),conv([1 -0.95*exp(1j*2*(pi)*f1/110)],[1 -0.95*exp(-1j*2*(pi)*f1/110)]));
 y1 = filter(1,b,sigma_b*randn(size(t)));
@@ -49,7 +49,7 @@ title('Noisy AR process');
 xlabel('time','Interpreter','Latex');
 ylabel('Amplitude','Interpreter','Latex')
 
-%% **************************Ground Truth***********************************
+%****************************Ground Truth***********************************
 sigma_b =(5*10^-4);
 [Hb,Freq] = freqz(1,b,330,Fs);
 % figure, plot(Freq, 20*log10(abs(Hb)));
@@ -80,7 +80,7 @@ xlabel('Time(s)','Interpreter','Latex');
 ylabel('Frequency(Hz)','Interpreter','Latex');
 title('Ground Truth','Interpreter','Latex');
 drawnow
-%% Estimates
+%*****************************Estimates************************************
 W = 6;          % 6 s window-length
 R = Fs*6;       % freq resolution
 U = 329;        % # of frequency bins to be estimated
@@ -102,7 +102,7 @@ DBMT_est = DBMTSpectrogram(y,W,R,U,rho,K,Fs);
 subplot(4,1,4),
 log_DBMT_est = log_DBMTSpectrogram(y,W,U,rho,K,Fs);
 
-%% Confidence Intervals for window starting at t = 79*6 = 477 sec 
+%*****Confidence Intervals for window starting at t = 79*6 = 477 sec******* 
 figure, 
 subplot(4,1,1),
 plot(Freq(1:150),PSD_y(1:150,79))
