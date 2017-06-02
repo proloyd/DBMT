@@ -14,7 +14,7 @@ final_est = 0;
 
 for seq_num = 1:1:num_tapers
     tic
-    S = TSpectogram(y,W,0,time_halfbandwidth,seq_num,Fs);
+    S = TSpectrogram(y,W,0,time_halfbandwidth,seq_num,Fs);
     Y = log(S(1:U+1,:));     
     x = 0*ones(size(Y));     %k|k or k|N
     alpha = 0;
