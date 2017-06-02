@@ -1,4 +1,11 @@
+%Dynamic Bayesian Multi Taper Estimation algorithms
+%Master script to regenerate the Fig. 3 in Dynamic Bayesian Multitaper  
+%Spectral Analysis.
+
 clear all
+mkdir CMT
+mkdir DBMT
+mkdir log_DBMT
 %%*************************Generation of Toy Example***********************
 T = 600; % in s
 Fs = 110;
