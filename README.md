@@ -1,5 +1,5 @@
 # DBMT
-Dynamic Bayesian Multi Taper Estimation algorithms
+Dynamic Bayesian Multitaper Estimation MATLAB Codes
 
 Description: This repository contains implementations of the algorithms developed in Dynamic Bayesian Multi Taper estimation paradigm. 
 
