@@ -1,12 +1,17 @@
 function [ u_b,l_b ] = confidence_interval_CMT( n, num_seq )
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
+%[ u_b,l_b ] = confidence_interval_CMT( n, num_seq ) computes 
+%95% confidence interval of conventional multitaper estimates
+%of a single window.
+%
+% Inputs:
+%   n = window number
+%   num_seq = # of tapers used
 
 degrees_of_freedom = 2*num_seq;
 u_mul = 1.237;
 l_mul = 12.592;
-Fs = 110;
-N = 6*Fs;   % 6 sec window
+Fs = 110;     % Sampling Frequency  (Change accordingly)
+N = 6*Fs;     % 6 sec window size   (Change accordingly)
 
 pathname = fileparts('./CMT/file');
 matfile = fullfile(pathname, 'mtm_est.mat');
