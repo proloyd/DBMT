@@ -1,12 +1,22 @@
 function [ final_Confidence_bounds ] = confidence_interval_DBMT( n, num_seq )
-%confidence_interval_DBMT(n, num_seq) plots 95% confidence interval for
-%DBMT estimate at nth window assuming num_seq number of tapers were used 
-%in that estimate. The multiplier can be changed to obtain any other 
+%[ final_Confidence_bounds ] = confidence_interval_DBMT(n, num_seq) 
+%plots 95% confidence interval for DBMT estimate at nth window 
+%assuming num_seq number of tapers were used in that estimate. 
+%The multiplier can be changed to obtain any other 
 %confidence level.
+%
+%
+% Inputs:
+%   n = window number
+%   num_seq = # of tapers used
+%
+% Outputs:
+%   final_Confidence_bounds(:,1) = upper confidence bound
+%   final_Confidence_bounds(:,2) = lower confidence bound
 
 multiplier = 2.326; % From normal table
-Fs = 110; % in Hz
-W = 6;  % s 
+Fs = 110; % in Hz  , Sampling Frequency (Change Accordingly)
+W = 6;  % s  , Window length (Change Accordingly)
 W = W*Fs;
 final_est = 0;
 final_Confidence_bounds = 0;
