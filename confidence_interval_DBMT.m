@@ -59,7 +59,6 @@ end
 final_est = final_est/3;
 final_Confidence_bounds = final_Confidence_bounds/3;
 
-%%
 plot((1:120)/6,10*log10(W^2*final_est((1:120))/Fs));
 hold on
 plot((1:120)/6,10*log10(W^2*final_Confidence_bounds(1:120,1)/Fs),'g');
