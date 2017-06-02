@@ -1,10 +1,17 @@
 function [ final_est ] = log_DBMTSpectrogram( y,W,U,time_halfbandwidth,num_tapers,Fs )
-%Computed spectogram using the proposed method
-%   y = Times series data
+%[ final_est ] = log_DBMTSpectrogram( y,W,U,time_halfbandwidth,num_tapers,Fs ) 
+%computes log_DBMT spectrogram of time-series data. 
+%
+% Outputs:
+%   final_est = log-DBMT estimate
+%
+% Inputs:
+%   y = Data
 %   W = window length in seconds
 %   U = # of frequency points to be estimated
-%   K = # of frequency bin
-%   Fs = sampling frequency
+%   time_halfbandwidth = N*B
+%   num_tapers = # of tapers to be used
+%   Fs = Sampling Frequency
 
 N = floor(length(y)/(W*Fs)); %# of windows
 TOL = 3*10^-2;
