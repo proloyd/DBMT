@@ -1,8 +1,16 @@
 function [ x_sol, Sigma_sol ] = Post_mode_var( y, x, nu, Sigma )
-% Finds the posterior mode and variance
+%[ x_sol, Sigma_sol ] = Post_mode_var( y, x, nu, Sigma )
+%Finds the posterior mode and variance in log_DBMT algo.
+%
+% Input:
 %   y = observation
 %   x = x_{(k|k-1)} One step prediction
+%   nu = degrees of freedom
 %   Sigma = \Sigma_{k|k-1} Prediction variance
+%
+% Output:
+%   x_sol = posterior mode
+%   Sigma_sol = posterior variance
 
 MAXLEN = 100;
 TOL = 10^-6;
