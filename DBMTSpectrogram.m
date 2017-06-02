@@ -3,7 +3,7 @@ function [ final_est ] = DBMTSpectrogram( y,W,K,U,time_halfbandwidth,num_tapers,
 % spectrogram of time-series data. 
 %
 % Outputs:
-%   final_est = conventional multitaper estimate
+%   final_est = DBMT estimate
 %
 %Inputs:
 %   y = Data
