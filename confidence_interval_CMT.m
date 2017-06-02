@@ -6,6 +6,10 @@ function [ u_b,l_b ] = confidence_interval_CMT( n, num_seq )
 % Inputs:
 %   n = window number
 %   num_seq = # of tapers used
+%
+% Outputs:
+%   u_b = upper confidence bound
+%   l_b = lower confidence bound
 
 degrees_of_freedom = 2*num_seq;
 u_mul = 1.237;
