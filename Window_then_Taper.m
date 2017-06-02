@@ -1,5 +1,6 @@
 function [y] = Window_then_Taper( x,seq )
-%windows the data  and then multiply by taper. 
+%[y] = Window_then_Taper( x,seq ) windows the data
+% and then multiply by taper (Used in DBMT algo). 
 %
 % Output:
 %  y = data
