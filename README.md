@@ -1,6 +1,11 @@
 # DBMT
-Dynamic Bayesian Multi Taper Estimation algorithms: 
-This repository contains implementations of the algorithms developed in Dynamic Bayesian Multi Taper estimation paradigm.
+Dynamic Bayesian Multi Taper Estimation algorithms: \\
+Description: This repository contains implementations of the algorithms developed in Dynamic Bayesian Multi Taper estimation paradigm. 
+Copyright:
+
+Date:
+
+
 Contents:
   1. Main.m: Master script.
   2. TSpectrogram: genrates single taper sSpectrogram estimates.
@@ -10,3 +15,5 @@ Contents:
   5. DBMT_EM: EM step for DBMT algorithm.
   6. log_DBMT_EM: EM step for log-DBMT algorithm.
   7. Window_then_Taper: Segments the data and then multiplyes by taper (Used in DBMTSpectrogram).
+
+Additional Note: (3 folders)
