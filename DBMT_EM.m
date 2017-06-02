@@ -1,13 +1,21 @@
-function [ x_sol, alpha_sol ] = DBMT_EM( num, x,F,N,W,U,data,sigma2,alpha,TOL,max_iter )
-%EM_algo Computes time-frequency representation given the data
+function [ x_sol, alpha_sol ] = DBMT_EM( num,x,F,N,W,U,data,sigma2,alpha,TOL,max_iter )
+%[ x_sol, alpha_sol ] = DBMT_EM( num,x,F,N,W,U,data,sigma2,alpha,TOL,max_iter )
+% implements EM algorithm required for DBMT analysis.
+%
+% Outputs:
+%   x_sol = time-frequency representation
+%   alpha_sol = Estimated Smoothing Parameter
+%
+% Inputs:
 %   num = sequence number
 %   data = data
 %   x = initial guess
 %   F = Fourier matrix
 %   N = # of windows
+%   W = Window length 
 %   U = # of frequency bins
 %   sigma2 = \sigma^2, observation noise variance
-%   alpha = smoothing parameter
+%   alpha = initial guess for smoothing parameter(usually 0)
 %   TOL = tolerence for convergence
 %   max_iter = maximum # of of iteration
 
