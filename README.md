@@ -6,7 +6,7 @@ Description: This repository contains implementations of the algorithms develope
 Copyright (c) 2017 Proloy Das All Rights Reserved 
 
 Contact: proloy@umd.edu
-(Das et. al., Dynamic Bayesian Multitaper Spectral Analysis, Submitted at ,2017)
+(Das and Babadi, Dynamic Bayesian Multitaper Spectral Analysis, Submitted at ,2017)
 
 Date: 
 
