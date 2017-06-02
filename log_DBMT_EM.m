@@ -1,10 +1,17 @@
 function [ x_sol, alpha_sol ] = log_DBMT_EM( num,x,N,Y,alpha,TOL,max_iter )
-%EM_algo Computes time-frequency representation given the data, Y
+%[ x_sol, alpha_sol ] = log_DBMT_EM( num,x,N,Y,alpha,TOL,max_iter )
+% implements EM algorithm required for log_DBMT analysis.
+%
+% Outputs:
+%   x_sol = time-frequency representation
+%   alpha_sol = Estimated Smoothing Parameter
+%
+% Inputs:
 %   num = sequence number
-%   Y = data
 %   x = initial guess
 %   N = # of windows
-%   alpha = smoothing parameter
+%   Y = data, noisy spectral estimates
+%   alpha = initial guess for smoothing parameter(usually 0)
 %   TOL = tolerence for convergence
 %   max_iter = maximum # of of iteration
 
