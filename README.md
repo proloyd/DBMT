@@ -8,10 +8,11 @@ Copyright (c) 2017 Proloy Das All Rights Reserved
 Contact: proloy@umd.edu
 (Das et. al., Dynamic Bayesian Multitaper Spectral Analysis, Submitted at ,2017)
 
-
 Date: 
 
-
+Requirements:
+  implemented in Matlab R2016b version, but should run on most versions.
+  
 Contents:
   1. Main.m: Master script.
   2. TSpectrogram.m: genrates single taper sSpectrogram estimates.
