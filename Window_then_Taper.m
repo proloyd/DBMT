@@ -1,8 +1,13 @@
 function [y] = Window_then_Taper( x,seq )
 %windows the data  and then multiply by taper. 
-%   y = data
-%   seq = Taper
-%   N = seq_length 
+%
+% Output:
+%  y = data
+%
+% Input:
+%  x = time-series data
+%  seq = Taper
+
 
 N = length(seq);
 W = floor(length(x)/N);
