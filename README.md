@@ -15,6 +15,7 @@ Requirements:
   implemented in Matlab R2016b version, but should run on most versions.
   
 Contents:
+  
   1. main.m: Master script.
   2. TSpectrogram.m: genrates single taper sSpectrogram estimates.
   2. MTSpectrogram.m: genrates overlapped multi taper spectrogram estimates.
