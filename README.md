@@ -16,18 +16,18 @@ Requirements:
   
 Contents:
   
-  1. main.m: Master script.
-  2. TSpectrogram.m: genrates single taper sSpectrogram estimates.
-  2. MTSpectrogram.m: genrates overlapped multi taper spectrogram estimates.
-  3. DBMTSpectrogram.m: genrates DBMT estimates.
-  4. log_DBMTSpectrogram.m: genrates log_DBMT estimates.
-  5. DBMT_EM.m: EM step for DBMT algorithm.
-  6. log_DBMT_EM.m: EM step for log-DBMT algorithm.
-  7. Window_then_Taper.m: Segments the data and then multiplyes by taper (Used in DBMTSpectrogram).
-  8. Post_mode_var.m: Calculates posterior mode and variance in log_DBMT algorithm.
-  9. confidence_interval_CMT.m: plots 95% confidence interval of conventional multitaper estimates of a single window.
-  10. confidence_interval_DBMT.m: plots 95% confidence interval for DBMT estimate of a single window.
-  11. confidence_interval_log_DBMT.m: plots 95% confidence interval for log_DBMT estimate of a single window.
+    1. main.m: Master script.
+    2. TSpectrogram.m: genrates single taper sSpectrogram estimates.
+    2. MTSpectrogram.m: genrates overlapped multi taper spectrogram estimates.
+    3. DBMTSpectrogram.m: genrates DBMT estimates.
+    4. log_DBMTSpectrogram.m: genrates log_DBMT estimates.
+    5. DBMT_EM.m: EM step for DBMT algorithm.
+    6. log_DBMT_EM.m: EM step for log-DBMT algorithm.
+    7. Window_then_Taper.m: Segments the data and then multiplyes by taper (Used in DBMTSpectrogram).
+    8. Post_mode_var.m: Calculates posterior mode and variance in log_DBMT algorithm.
+    9. confidence_interval_CMT.m: plots 95% confidence interval of conventional multitaper estimates of a single window.
+    10. confidence_interval_DBMT.m: plots 95% confidence interval for DBMT estimate of a single window.
+    11. confidence_interval_log_DBMT.m: plots 95% confidence interval for log_DBMT estimate of a single window.
 
 
 Instructions: Simple and easy.
