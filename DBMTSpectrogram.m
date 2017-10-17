@@ -20,7 +20,7 @@ TOL = 3*10^-3;
 final_est = 0;
 max_iter = 40;          % usually takes <10 iterations
 
-sigma2 = 0.0001;        % sigma2 and Q^{[0]} needs to be chosed for faster convergence
+sigma2 = 0.0001;        % sigma2 and Q^{[0]} needs to be chosen for faster convergence
 alpha = 0;
 
 %**********************generate dpss_sequences*****************************
