@@ -8,7 +8,9 @@ Copyright (c) 2017 Proloy Das All Rights Reserved
 Contact: proloy@umd.edu
 
 Citation: If you find these piece of codes helpful in your reserach, please cite any/both of the following papers-
+
 (1)P. Das and B. Babadi, Dynamic Bayesian Multitaper Spectral Analysis; IEEE Trans. on Signal Processing, vol. 66, no. 6, pp. 1394-1409, March15, 15 2018.
+
 (2)P. Das, B. Babadi, A Bayesian Multitaper Method for Nonstationary Data with Application to EEG Analysis; 2017 IEEE Signal Processing in Medicine and Biology Symposium (SPMB17), Dec. 2, Philadelphia, PA.
 
 Date: June 5, 2017
